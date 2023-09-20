@@ -171,22 +171,12 @@
         app:layout_constraintStart_toEndOf="@+id/GehituLau"
         app:layout_constraintTop_toTopOf="@+id/GehituHiru" />
 
-    <androidx.constraintlayout.Constraints
-        android:id="@+id/constraints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.Constraints
-        android:id="@+id/constraints2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

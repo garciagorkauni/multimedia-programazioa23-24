@@ -23,12 +23,6 @@ public class MainActivity extends AppCompatActivity {
     int kontadoreOrokorra;
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("key", "value");
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -61,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 kontadorea3 = 0;
                 kontadorea4 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuBi.setText(kontadorea2);
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -74,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea1 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -84,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea2 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBi.setText(kontadorea2);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -94,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea3 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -104,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea4 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -114,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea1++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -124,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea2++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBi.setText(kontadorea2);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -134,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea3++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -144,15 +138,35 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea4++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("KontagailuOrokorra", kontadoreOrokorra);
+        outState.putInt("KontagailuBat", kontadorea1);
+        outState.putInt("KontagailuBi", kontadorea2);
+        outState.putInt("KontagailuHiru", kontadorea3);
+        outState.putInt("KontagailuLau", kontadorea4);
+    }
+
+    @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        String savedValue = savedInstanceState.getString("key");
+        kontadoreOrokorra = savedInstanceState.getInt("KontagailuOrokorra");
+        kontadorea1 = savedInstanceState.getInt("KontagailuBat");
+        kontadorea2 = savedInstanceState.getInt("KontagailuBi");
+        kontadorea3 = savedInstanceState.getInt("KontagailuHiru");
+        kontadorea4 = savedInstanceState.getInt("KontagailuLau");
+
+        KontagailuOrokorra.setText(String.valueOf(kontadoreOrokorra));
+        KontagailuBat.setText(String.valueOf(kontadorea1));
+        KontagailuBi.setText(String.valueOf(kontadorea2));
+        KontagailuHiru.setText(String.valueOf(kontadorea3));
+        KontagailuLau.setText(String.valueOf(kontadorea4));
     }
 }

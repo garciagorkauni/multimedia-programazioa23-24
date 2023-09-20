@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 kontadorea3 = 0;
                 kontadorea4 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuBi.setText(kontadorea2);
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea1 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea2 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBi.setText(kontadorea2);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea3 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -99,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea4 = 0;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -109,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea1++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBat.setText(kontadorea1);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBat.setText(Integer.toString(kontadorea1));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -119,8 +119,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea2++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuBi.setText(kontadorea2);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuBi.setText(Integer.toString(kontadorea2));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -129,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea3++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuHiru.setText(kontadorea3);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuHiru.setText(Integer.toString(kontadorea3));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
 
@@ -139,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 kontadorea4++;
                 kontadoreOrokorra = kontadorea1 + kontadorea2 + kontadorea3 + kontadorea4;
-                KontagailuLau.setText(kontadorea4);
-                KontagailuOrokorra.setText(kontadoreOrokorra);
+                KontagailuLau.setText(Integer.toString(kontadorea4));
+                KontagailuOrokorra.setText(Integer.toString(kontadoreOrokorra));
             }
         });
     }
