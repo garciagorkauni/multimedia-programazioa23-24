@@ -3,6 +3,7 @@ package com.example.implicit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
         websiteButton = findViewById(R.id.websiteButton);
         locationButton = findViewById(R.id.locationButton);
         textButton = findViewById(R.id.textButton);
+
+        Resources resources = getResources();
+        String websiteButtonText = resources.getString(R.string.website_button_text);
+        websiteButton.setText(websiteButtonText);
+
+        String locationButtonText = resources.getString(R.string.location_button_text);
+        locationButton.setText(locationButtonText);
+
+        String textButtonText = resources.getString(R.string.text_button_text);
+        textButton.setText(textButtonText);
 
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
