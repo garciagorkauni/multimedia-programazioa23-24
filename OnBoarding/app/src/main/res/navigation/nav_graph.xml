@@ -9,12 +9,20 @@
         android:id="@+id/onboarding1Fragment"
         android:name="com.example.onboarding.Onboarding1Fragment"
         android:label="fragment_onboarding1"
-        tools:layout="@layout/fragment_onboarding1" />
+        tools:layout="@layout/fragment_onboarding1" >
+        <action
+            android:id="@+id/action_onboarding1Fragment_to_onboarding2Fragment"
+            app:destination="@id/onboarding2Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/onboarding2Fragment"
         android:name="com.example.onboarding.Onboarding2Fragment"
         android:label="fragment_onboarding2"
-        tools:layout="@layout/fragment_onboarding2" />
+        tools:layout="@layout/fragment_onboarding2" >
+        <action
+            android:id="@+id/action_onboarding2Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.onboarding.HomeFragment"
