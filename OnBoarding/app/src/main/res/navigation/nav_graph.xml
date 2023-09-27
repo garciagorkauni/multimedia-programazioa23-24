@@ -21,9 +21,9 @@
             android:id="@+id/action_onboarding1Fragment_to_onboarding3Fragment"
             app:destination="@id/onboarding3Fragment"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/onboarding2Fragment"
@@ -33,10 +33,10 @@
         <action
             android:id="@+id/action_onboarding2Fragment_to_onboarding3Fragment"
             app:destination="@id/onboarding3Fragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/onboarding3Fragment"
