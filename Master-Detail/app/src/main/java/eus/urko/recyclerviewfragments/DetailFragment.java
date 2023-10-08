@@ -27,23 +27,14 @@ public class DetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ElementsViewModel elementsViewModel = new ViewModelProvider(requireActivity()).get(ElementsViewModel.class);
+        BooksViewModel booksViewModel = new ViewModelProvider(requireActivity()).get(BooksViewModel.class);
 
-        elementsViewModel.selected().observe(getViewLifecycleOwner(), new Observer<Element>() {
+        booksViewModel.selected().observe(getViewLifecycleOwner(), new Observer<Book>() {
             @Override
-            public void onChanged(Element element) {
-                binding.name.setText(element.name);
-                binding.description.setText(element.description);
-                binding.rating.setRating(element.rating);
-
-                binding.rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-                    @Override
-                    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                        if(fromUser){
-                            elementsViewModel.update(element, rating);
-                        }
-                    }
-                });
+            public void onChanged(Book book) {
+                binding.title.setText(book.title);
+                binding.author.setText(book.author);
+                binding.description.setText(book.description);
             }
         });
     }

@@ -13,7 +13,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,7 +24,7 @@ import eus.urko.recyclerviewfragments.databinding.FragmentViewholderElementBindi
 public class RecyclerFragment extends Fragment {
 
     private FragmentRecyclerBinding binding;
-    private ElementsViewModel elementsViewModel;
+    private BooksViewModel booksViewModel;
     private NavController navController;
 
     @Override
@@ -39,7 +38,7 @@ public class RecyclerFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        elementsViewModel = new ViewModelProvider(requireActivity()).get(ElementsViewModel.class);
+        booksViewModel = new ViewModelProvider(requireActivity()).get(BooksViewModel.class);
         navController = Navigation.findNavController(view);
 
         binding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -52,10 +51,10 @@ public class RecyclerFragment extends Fragment {
         ElementsAdapter elementsAdapter = new ElementsAdapter();
         binding.recyclerView.setAdapter(elementsAdapter);
 
-        elementsViewModel.get().observe(getViewLifecycleOwner(), new Observer<List<Element>>() {
+        booksViewModel.get().observe(getViewLifecycleOwner(), new Observer<List<Book>>() {
             @Override
-            public void onChanged(List<Element> elements) {
-                elementsAdapter.establishList(elements);
+            public void onChanged(List<Book> books) {
+                elementsAdapter.establishList(books);
             }
         });
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
@@ -70,8 +69,8 @@ public class RecyclerFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
-                Element element = elementsAdapter.getElement(position);
-                elementsViewModel.delete(element);
+                Book book = elementsAdapter.getElement(position);
+                booksViewModel.delete(book);
 
             }
         }).attachToRecyclerView(binding.recyclerView);
@@ -87,8 +86,8 @@ public class RecyclerFragment extends Fragment {
     }
 
     class ElementsAdapter extends RecyclerView.Adapter<ElementViewHolder> {
-        List<Element> elements;
-        public Element getElement(int posicion){
+        List<Book> elements;
+        public Book getElement(int posicion){
             return elements.get(posicion);
         }
 
@@ -101,24 +100,16 @@ public class RecyclerFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull ElementViewHolder holder, int position) {
 
-            Element element = elements.get(position);
-            holder.binding.name.setText(element.name);
-            holder.binding.ratingBar.setRating(element.rating);
-            holder.binding.imageView.setImageResource(element.image);
+            Book book = elements.get(position);
+            holder.binding.title.setText(book.title);
+            holder.binding.author.setText(book.author);
+            holder.binding.imageView.setImageResource(book.image);
 
-            holder.binding.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-                @Override
-                public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                    if(fromUser) {
-                        elementsViewModel.update(element, rating);
-                    }
-                }
-            });
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    elementsViewModel.select(element);
+                    booksViewModel.select(book);
                     navController.navigate(R.id.action_recyclerFragment_to_detailFragment);
                 }
             });
@@ -129,8 +120,8 @@ public class RecyclerFragment extends Fragment {
             return elements != null ? elements.size() : 0;
         }
 
-        public void establishList(List<Element> elements) {
-            this.elements = elements;
+        public void establishList(List<Book> books) {
+            this.elements = books;
             notifyDataSetChanged();
         }
     }

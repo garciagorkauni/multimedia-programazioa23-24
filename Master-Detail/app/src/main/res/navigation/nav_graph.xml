@@ -24,12 +24,12 @@
         tools:layout="@layout/fragment_detail" />
     <fragment
         android:id="@+id/newElementFragment"
-        android:name="eus.urko.recyclerviewfragments.NewElementFragment"
+        android:name="eus.urko.recyclerviewfragments.NewBookFragment"
         android:label="fragment_new_element"
         tools:layout="@layout/fragment_new_element" />
     <fragment
         android:id="@+id/viewholderElementBinding"
-        android:name="eus.urko.recyclerviewfragments.ViewholderElementBinding"
+        android:name="eus.urko.recyclerviewfragments.ViewholderBookBinding"
         android:label="fragment_viewholder_element_binding"
         tools:layout="@layout/fragment_viewholder_element_binding" />
 </navigation>
