@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
@@ -12,46 +13,24 @@ public class ElementsViewModel extends AndroidViewModel {
 
     ElementsRepository elementsRepository;
 
-    MutableLiveData<List<Element>> listElementsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<Element> elementSelected = new MutableLiveData<>();
 
     public ElementsViewModel(@NonNull Application application) {
         super(application);
 
-        elementsRepository = new ElementsRepository();
-
-        listElementsMutableLiveData.setValue(elementsRepository.get());
+        elementsRepository = new ElementsRepository(application);
     }
 
-
-    MutableLiveData<List<Element>> get(){
-        return listElementsMutableLiveData;
-    }
-
-    void add(Element element){
-        elementsRepository.insert(element, new ElementsRepository.Callback() {
-            public void whenFinish(List<Element> elements) {
-                listElementsMutableLiveData.setValue(elements);
-            }
-        });
+    void insert(Element element){
+        elementsRepository.insert(element);
     }
 
     void delete(Element element){
-        elementsRepository.delete(element, new ElementsRepository.Callback() {
-            @Override
-            public void whenFinish(List<Element> elements) {
-                listElementsMutableLiveData.setValue(elements);
-            }
-        });
+        elementsRepository.delete(element);
     }
 
     void update(Element element, float rating){
-        elementsRepository.update(element, rating, new ElementsRepository.Callback() {
-            @Override
-            public void whenFinish(List<Element> elements) {
-                listElementsMutableLiveData.setValue(elements);
-            }
-        });
+        elementsRepository.update(element, rating);
     }
 
     void select(Element element){
@@ -60,5 +39,9 @@ public class ElementsViewModel extends AndroidViewModel {
 
     MutableLiveData<Element> selected(){
         return elementSelected;
+    }
+
+    LiveData<List<Element>> obtain(){
+        return elementsRepository.get();
     }
 }

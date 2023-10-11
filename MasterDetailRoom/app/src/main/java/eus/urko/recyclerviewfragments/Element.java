@@ -1,6 +1,12 @@
 package eus.urko.recyclerviewfragments;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Element {
+        @PrimaryKey(autoGenerate = true)
+        int id;
         String name;
         String description;
         float rating;
