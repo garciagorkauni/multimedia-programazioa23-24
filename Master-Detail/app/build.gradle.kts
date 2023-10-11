@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "eus.urko.recyclerviewfragments"
-        minSdk = 29
+        minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
