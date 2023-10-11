@@ -32,7 +32,7 @@ public class DetailFragment extends Fragment {
         booksViewModel.selected().observe(getViewLifecycleOwner(), new Observer<Book>() {
             @Override
             public void onChanged(Book book) {
-                binding.title.setText(book.title);
+                binding.title.setText(book.tittle);
                 binding.author.setText(book.author);
                 binding.description.setText(book.description);
             }

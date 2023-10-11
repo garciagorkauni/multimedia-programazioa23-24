@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
@@ -11,47 +12,24 @@ import java.util.List;
 public class BooksViewModel extends AndroidViewModel {
 
     BooksRepository booksRepository;
-
-    MutableLiveData<List<Book>> listElementsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<Book> elementSelected = new MutableLiveData<>();
 
     public BooksViewModel(@NonNull Application application) {
         super(application);
 
-        booksRepository = new BooksRepository();
-
-        listElementsMutableLiveData.setValue(booksRepository.get());
+        booksRepository = new BooksRepository(application);
     }
 
-
-    MutableLiveData<List<Book>> get(){
-        return listElementsMutableLiveData;
-    }
-
-    void add(Book book){
-        booksRepository.insert(book, new BooksRepository.Callback() {
-            public void whenFinish(List<Book> books) {
-                listElementsMutableLiveData.setValue(books);
-            }
-        });
+    void insert(Book book){
+        booksRepository.insert(book);
     }
 
     void delete(Book book){
-        booksRepository.delete(book, new BooksRepository.Callback() {
-            @Override
-            public void whenFinish(List<Book> books) {
-                listElementsMutableLiveData.setValue(books);
-            }
-        });
+        booksRepository.delete(book);
     }
 
-    void update(Book book, float rating){
-        booksRepository.update(book, new BooksRepository.Callback() {
-            @Override
-            public void whenFinish(List<Book> books) {
-                listElementsMutableLiveData.setValue(books);
-            }
-        });
+    void update(Book book){
+        booksRepository.update(book);
     }
 
     void select(Book book){
@@ -60,5 +38,9 @@ public class BooksViewModel extends AndroidViewModel {
 
     MutableLiveData<Book> selected(){
         return elementSelected;
+    }
+
+    LiveData<List<Book>> obtain(){
+        return booksRepository.get();
     }
 }

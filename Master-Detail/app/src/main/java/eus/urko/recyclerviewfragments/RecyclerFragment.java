@@ -51,7 +51,7 @@ public class RecyclerFragment extends Fragment {
         ElementsAdapter elementsAdapter = new ElementsAdapter();
         binding.recyclerView.setAdapter(elementsAdapter);
 
-        booksViewModel.get().observe(getViewLifecycleOwner(), new Observer<List<Book>>() {
+        booksViewModel.obtain().observe(getViewLifecycleOwner(), new Observer<List<Book>>() {
             @Override
             public void onChanged(List<Book> books) {
                 elementsAdapter.establishList(books);
@@ -86,9 +86,9 @@ public class RecyclerFragment extends Fragment {
     }
 
     class ElementsAdapter extends RecyclerView.Adapter<ElementViewHolder> {
-        List<Book> elements;
+        List<Book> books;
         public Book getElement(int posicion){
-            return elements.get(posicion);
+            return books.get(posicion);
         }
 
         @NonNull
@@ -100,8 +100,8 @@ public class RecyclerFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull ElementViewHolder holder, int position) {
 
-            Book book = elements.get(position);
-            holder.binding.title.setText(book.title);
+            Book book = books.get(position);
+            holder.binding.title.setText(book.tittle);
             holder.binding.author.setText(book.author);
             holder.binding.imageView.setImageResource(book.image);
 
@@ -117,11 +117,11 @@ public class RecyclerFragment extends Fragment {
 
         @Override
         public int getItemCount() {
-            return elements != null ? elements.size() : 0;
+            return books != null ? books.size() : 0;
         }
 
         public void establishList(List<Book> books) {
-            this.elements = books;
+            this.books = books;
             notifyDataSetChanged();
         }
     }

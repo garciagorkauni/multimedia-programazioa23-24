@@ -39,7 +39,7 @@ public class NewBookFragment extends Fragment {
                 String author = binding.author.getText().toString();
                 String description = binding.description.getText().toString();
 
-                elementosViewModel.add(new Book(R.drawable.defaultbook,title, author, description));
+                elementosViewModel.insert(new Book(R.drawable.defaultbook,title, author, description));
 
                 navController.popBackStack();
             }
