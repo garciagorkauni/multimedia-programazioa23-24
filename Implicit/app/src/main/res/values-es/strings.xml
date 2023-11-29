@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Implicit</string>
-    <string name="website_button_text">Abrir sitio web</string>
-    <string name="location_button_text">Abrir ubicación</string>
-    <string name="text_button_text">Compartir este texto</string>
-</resources>

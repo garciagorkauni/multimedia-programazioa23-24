@@ -1,0 +1,286 @@
+[33mcommit 4332064332f1e348915836c0a992c833e642ffee[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Nov 29 10:37:10 2023 +0100
+
+    Restructured Unity projects + Made unity first exercise
+
+[33mcommit e7b952b88333c5329f9ed14b57b781492ebf2f5a[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Nov 29 10:30:01 2023 +0100
+
+    Restructured AndroidStudio projects
+
+[33mcommit bc08d9b50955ee001593d1cecce1c2f71f28200e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 10:29:23 2023 +0200
+
+    Add videos
+
+[33mcommit 71839acb2fdf83d25855e4781bbc133e8df316dd[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 10:19:14 2023 +0200
+
+    Master-Detail linked with database
+
+[33mcommit 366ad646d7a886c27a94b6d02b69fc442d2e67b3[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 09:28:28 2023 +0200
+
+    Fix Master-detail
+
+[33mcommit 173a354a5702866f066bbe42ae4510d49af452c7[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 09:06:20 2023 +0200
+
+    Update minSDK Master-Detail
+
+[33mcommit 0e327afb499bafac4524f14f9854772d304f687d[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 08:59:06 2023 +0200
+
+    MasterDetailRoom conected with database
+
+[33mcommit 63eed35c00fb696649223a9b45130eb65f7f0ec1[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Oct 11 08:16:53 2023 +0200
+
+    define minsdk as 27
+
+[33mcommit 9e5ef5dcfe253ec960e7cc6013557b8fc549c4a8[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Mon Oct 9 13:13:45 2023 +0200
+
+    Add dependencies
+
+[33mcommit 6b95f5405ec82818274aa82763a911621aac0da0[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Mon Oct 9 13:10:55 2023 +0200
+
+    Create MasterDetailRoom project
+
+[33mcommit bd200ab542eca0e09f4b3003baa1c7b8489eb302[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Sun Oct 8 20:15:09 2023 +0200
+
+    MasterDetail book project made
+
+[33mcommit b176db453c0b22ae61c56fb67c356c3b7145a5d4[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Oct 3 12:54:52 2023 +0200
+
+    Enter data (images missing)
+
+[33mcommit 5c2a9e3ea14ba5f8f782b8c515d60cf074129e34[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Oct 3 12:43:22 2023 +0200
+
+    finish example + create Master-Detail
+
+[33mcommit 99eeae1703ce896c85c0992107be24ebf4d53361[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 09:57:59 2023 +0200
+
+    Add videos
+
+[33mcommit 2007f1ace40d9418bb3b39f36ab22f9ceebb5283[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 09:46:40 2023 +0200
+
+    Update translations
+
+[33mcommit 7631790df1cd423069a09f4436ddfd483f5ee412[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 09:39:32 2023 +0200
+
+    Add multilanguage
+
+[33mcommit 668fdc454461b0fb8f45f2f9fab136b7bae170d5[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 09:27:25 2023 +0200
+
+    Add skip button
+
+[33mcommit 52aba5a079c49ac9ac941936323098c7160672e7[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 09:10:42 2023 +0200
+
+    Add OnBoarding3Fragment
+
+[33mcommit 45e04ca5738afcbba3c6f5926e9a9237424855f9[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 08:51:50 2023 +0200
+
+    Add animations
+
+[33mcommit cef3aaad3762b70794d8f8f780d74b0bf3296ada[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 27 08:35:04 2023 +0200
+
+    Fix error
+    
+    ERROR: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.Button.setOnClickListener(android.view.View$OnClickListener)' on a null object reference
+
+[33mcommit db2b116a1dd9ac9c4efc9fb1c4d4ee68f93bfc2e[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 21:51:47 2023 +0200
+
+    Fix problem with sdk dependencies
+
+[33mcommit 25a29d68742958956a54730a844fdea6985ce88c[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 21:32:27 2023 +0200
+
+    Apply logic in java files
+
+[33mcommit 4312910a00fcb9d54f24d7ceb2a903a83611fe60[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 19:27:24 2023 +0200
+
+    Make design OnBoarding2
+
+[33mcommit 521d1973d39375b690577a1bba4db43b3269f3f0[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 19:24:10 2023 +0200
+
+    Make design OnBoarding1
+
+[33mcommit d65fb768c93424d2952f19becfebb8435736b9de[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 19:15:15 2023 +0200
+
+    Add images
+
+[33mcommit c70c56c5753fac9e317ea22e9dd22f9b5453659c[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Tue Sep 26 19:13:26 2023 +0200
+
+    Create media folder
+
+[33mcommit ee40c1d5813a1aec9c33580ae6e845669900d7e1[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:14:53 2023 +0200
+
+    Add FragmentContainerView in main layout
+
+[33mcommit 77847451b61c0c0a77d9ca503107daa396c59330[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:13:15 2023 +0200
+
+    Crate navigarion actions
+
+[33mcommit f21399c13c103b4c89b61aee3bd9727fdf00dc91[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:12:28 2023 +0200
+
+    Create fragments
+
+[33mcommit fad114de1789b06775ad67f21d23cd74de360b0e[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:10:26 2023 +0200
+
+    Create nav_graph.xml
+
+[33mcommit c0b5b27aad78186d5180ef2de152eb0f78ece19f[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:08:59 2023 +0200
+
+    Add dependencies
+
+[33mcommit 5182a4f3bd947f0f74ef63cecd4fff71f7c28fcf[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Tue Sep 26 13:08:09 2023 +0200
+
+    Create OnBoarding project
+
+[33mcommit 213431ae29681e9805ff8bdb6693f632d9d6f38a[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Mon Sep 25 12:24:07 2023 +0200
+
+    Add translations to Implicit project
+
+[33mcommit 230708f1de669c94fb7cfb7560d2bd85a9eddbc5[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Sun Sep 24 19:22:45 2023 +0200
+
+    Make ImplicitV2 project
+
+[33mcommit 0704f3266cfca525c7be89b54295cd1b3c67d63b[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Sun Sep 24 18:07:22 2023 +0200
+
+    Make  Implicit project
+
+[33mcommit 93730b8b9142bdb7094394496bc7cc7b1fe63764[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Sat Sep 23 15:15:28 2023 +0200
+
+    Make SecondActivityV2 project
+
+[33mcommit 4725fd94d7c64229dd303adf8654e44ca359b9c7[m
+Author: Gorka Garcia <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Sat Sep 23 13:46:44 2023 +0200
+
+    Make SecondActivity project
+
+[33mcommit 1ee40c3c7b8608d0361581d85a5a3d61c2b7c284[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Thu Sep 21 08:15:22 2023 +0200
+
+    Upload videos
+
+[33mcommit 13249114a739abdd31124367c10b127dd28902c9[m
+Merge: 915219f 7b08864
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 10:25:07 2023 +0200
+
+    Merge branch 'main' of https://github.com/garciagorkauni/multimedia-programazioa23-24
+
+[33mcommit 915219fc9b6cd347ec041c9a9bdd8f62d0aaa998[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 10:24:50 2023 +0200
+
+    Exercises fixed
+
+[33mcommit 7b08864f3db6791dc81869bc1d97c3fc80d05d7e[m
+Author: garciagorkauni <114485898+garciagorkauni@users.noreply.github.com>
+Date:   Wed Sep 20 08:46:40 2023 +0200
+
+    Update README
+
+[33mcommit 958feb8f6bdad695651f1fd72219598b363c6e38[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:43:52 2023 +0200
+
+    Make proccesToast
+    
+    This app shows the life cycle of an activity, showing a toast for each proccess.
+
+[33mcommit 9b382350a8c4f917b769072a10f27668a04bfba8[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:42:53 2023 +0200
+
+    Make multicounterV (different landscape)
+
+[33mcommit d40b28fe44a8ac8bc6de5af6bc8090f42fdd09b0[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:42:27 2023 +0200
+
+    Try multicounter with binding
+
+[33mcommit 55343fa9eb8f1c7d15f64f0324b1e48ccca61775[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:42:06 2023 +0200
+
+    Make multicounter normally
+
+[33mcommit 983a0485ea41f2feb1035df41ee3ba6dab6f558c[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:41:40 2023 +0200
+
+    Make simple counter
+
+[33mcommit 1896b3da564b26486b25677313723346cce75dcd[m
+Author: Gorka Garcia <garcia.gorka@uni.eus>
+Date:   Wed Sep 20 08:40:44 2023 +0200
+
+    Initial commit
