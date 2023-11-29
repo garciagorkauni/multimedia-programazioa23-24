@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:viewBindingIgnore="true">
+
+    <!-- Orokorra -->
+
+    <!-- Lehenengo kontadorea -->
+
+    <TextView
+        android:id="@+id/KontagailuOrokorra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="31dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/GehituBat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ResetOrokorra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="@color/orange"
+        android:text="Reset ALL"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/KontagailuOrokorra"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bigarren kontadorea -->
+
+    <TextView
+        android:id="@+id/KontagailuBi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/GehituBi"
+        app:layout_constraintEnd_toStartOf="@+id/GehituBi" />
+
+    <TextView
+        android:id="@+id/KontagailuLau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/green"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/GehituLau" />
+
+    <TextView
+        android:id="@+id/KontagailuBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="66dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/KontagailuBi"
+        app:layout_constraintEnd_toStartOf="@+id/GehituBat"
+        app:layout_constraintTop_toTopOf="@+id/KontagailuOrokorra" />
+
+    <TextView
+        android:id="@+id/KontagailuHiru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="7dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/GehituHiru"
+        app:layout_constraintEnd_toStartOf="@+id/GehituHiru" />
+
+    <Button
+        android:id="@+id/GehituBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="+1"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/KontagailuBat"
+        app:layout_constraintStart_toStartOf="@+id/GehituBi" />
+
+    <Button
+        android:id="@+id/ResetBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="137dp"
+        android:backgroundTint="@color/yellow"
+        android:text="RESET"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/GehituBi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="@color/green"
+        android:text="+1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/GehituHiru"
+        app:layout_constraintStart_toStartOf="@+id/GehituHiru" />
+
+    <!-- Hirugarren kontadorea -->
+
+    <Button
+        android:id="@+id/ResetBi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:backgroundTint="@color/yellow"
+        android:text="RESET"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/ResetBat"
+        app:layout_constraintTop_toBottomOf="@+id/ResetBat" />
+
+    <Button
+        android:id="@+id/GehituHiru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="+1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ResetHiru"
+        app:layout_constraintStart_toStartOf="@+id/GehituLau"
+        app:layout_constraintTop_toTopOf="@+id/ResetHiru" />
+
+    <!-- Laugarren kontadorea -->
+
+    <Button
+        android:id="@+id/ResetHiru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="@color/yellow"
+        android:text="RESET"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/ResetBi"
+        app:layout_constraintTop_toBottomOf="@+id/ResetBi" />
+
+    <Button
+        android:id="@+id/GehituLau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="@color/green"
+        android:text="+1"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ResetLau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="@color/yellow"
+        android:text="RESET"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ResetHiru" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
